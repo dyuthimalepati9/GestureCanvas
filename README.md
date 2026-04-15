@@ -1,86 +1,60 @@
-# GestureCanvas
-AI-powered hand gesture drawing app for touchless interaction using MediaPipe
-# 🌌 Neon AirDraw AI
+# 🌌 Neon Air Draw — AI Spatial Interface
 
-**Draw in the air. No touch needed.**
+A high-performance, real-time AI air drawing web application that utilizes advanced hand tracking for a "Minority Report" style spatial interface. 
 
-Neon AirDraw AI is a real-time, AI-powered web application that allows users to draw and interact with digital elements using hand gestures. By leveraging computer vision and hand tracking, the app creates a futuristic, touchless interface where your hands act as the primary input device.
+Draw in the air with your dominant hand and manipulate your creations in real-time with your non-dominant hand using intuitive gestures (Move, Scale, Rotate).
 
----
+## ✨ Key Features
 
-## 🚀 Features
-
-* ✋ **Hand Gesture Drawing** – Draw in the air using your fingers
-* 🤲 **Dual-Hand Interaction** – One hand to draw, another to control
-* 🔄 **Real-time Transformations** – Move, scale, and rotate drawings
-* 🧠 **AI Hand Tracking** – Powered by MediaPipe
-* 🎨 **Neon UI Experience** – Visually rich, immersive interface
-* ⚡ **High Performance** – Smooth real-time rendering
-
----
+*   **✋ Dual-Hand Interaction**: 
+    *   **Right Hand (Dominant)**: Handles high-precision drawing, selective erasing, and canvas clearing.
+    *   **Left Hand (Secondary)**: Dedicated to spatial transformations (Move, Scale, Rotate) of existing strokes.
+*   **📐 Non-Destructive Transforms**: Strokes retain their original coordinate data. All manipulations (TX, TY, Scale, Rotation) are applied at render time via matrix-based math.
+*   **🕶️ Minimalist Glassmorphism UI**: A premium, aesthetic interface with real-time HUD and visual feedback guides.
+*   **⚡ High Performance**: Native WebGL-based rendering engine optimized for 60FPS fluid interactions.
+*   **🌀 Physics-Based Interaction**: Smooth inertia on stroke movement and snap-to-angle (45°) for rotation.
+*   **📖 Gesture Guide**: Built-in interactive manual explaining every movement.
 
 ## 🛠️ Tech Stack
 
-* **Frontend:** HTML / JavaScript / React (if used)
-* **Hand Tracking:** MediaPipe Hands
-* **Rendering:** Canvas / WebGL
-* **Deployment:** Vercel
+*   **Frontend**: React + Vite
+*   **Hand Tracking**: @mediapipe/hands
+*   **Animations**: Framer Motion
+*   **Icons**: Lucide React (with custom inline SVG fallbacks for brand icons)
+*   **Styling**: Vanilla CSS (Modern Glassmorphism & Neon Aesthetics)
+
+## 🎮 Gesture Manual
+
+### ✍️ Drawing Hand (Right Hand)
+| Gesture | Action |
+|---|---|
+| ☝️ **Index Up** | Start drawing a stroke |
+| 🤏 **Pinch** | Selective eraser (intersects with fingertip path) |
+| ✊ **Fist** | Clear the entire canvas |
+
+### 🖐️ Control Hand (Left Hand)
+| Gesture | Action | Visual Feedback |
+|---|---|---|
+| ✌️ **Two Fingers** | **Move** nearest stroke | Blue crosshair + glow |
+| 🤏 **Pinch & Spread** | **Scale** stroke size | Concentric rings + % label |
+| 🤚 **Open Palm** | **Rotate** stroke | Orange arc + snap points |
+
+## 🚀 Getting Started
+
+1.  **Install Dependencies**:
+    ```bash
+    npm install
+    ```
+2.  **Run Development Server**:
+    ```bash
+    npm run dev
+    ```
+3.  **Use**: Grant camera permissions and raise your hands in view!
+
+## 👨‍💻 Developer
+**Akshat Singh**  
+📸 Instagram: [@code.akshat.in](https://www.instagram.com/code.akshat.in/)  
+🐙 GitHub: [Axshatt](https://github.com/Axshatt)
 
 ---
-
-## 🎮 How It Works
-
-1. Allow camera access
-2. Show your hands in front of the screen
-3. Use gestures to:
-
-   * ✍️ Draw
-   * 🤏 Erase
-   * ✊ Clear
-   * ✌️ Move objects
-   * 🖐️ Rotate / Scale
-
----
-
-## 📸 Demo
-
-👉 Live App: https://hand-connection-main1.vercel.app
-
----
-
-## ⚙️ Installation
-
-```bash
-git clone https://github.com/your-username/your-repo.git
-cd your-repo
-npm install
-npm run dev
-```
-
----
-
-## 👨‍💻 Author
-
-**Meghana**
-🚀 Passionate about AI, Web Development & Innovation
-
----
-
-## ⭐ Acknowledgements
-
-* MediaPipe for hand tracking
-* Modern web technologies for real-time interaction
-
----
-
-## 💡 Future Improvements
-
-* 🔐 User authentication (login system)
-* ☁️ Save drawings to cloud
-* 📱 Mobile optimization
-* 🎮 Gesture-based games
-
----
-
-**✨ Experience the future of touchless interaction!**
-
+*Built with passion for AI and Spatial Computing.*
